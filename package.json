@@ -1,0 +1,26 @@
+{
+  "name": "2bitvideoprocessor",
+  "version": "1.0.0",
+  "description": "Convert video image sequences into raw data files for use with 2bit displays.",
+  "main": "2bitvideoProcessor.js",
+  "author": "Owen McAteer",
+  "dependencies": {
+    "args": "^5.0.1",
+    "image-js": "^0.21.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:owenmcateer/2bit-Video-Processor.git"
+  },
+  "keywords": [
+    "Video converter",
+    "2bit",
+    "2bit displays",
+    "flipdots"
+  ],
+  "license": "gpl-3.0",
+  "bugs": {
+    "url": "https://github.com/owenmcateer/2bit-Video-Processor/issues"
+  },
+  "homepage": "https://github.com/owenmcateer/2bit-Video-Processor#readme"
+}
