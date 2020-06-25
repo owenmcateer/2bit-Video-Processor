@@ -29,6 +29,7 @@
 const args = require('args');
 const fs = require('fs');
 const { Image } = require('image-js');
+const { exit } = require('process');
 
 
 // Setup arguments
@@ -62,6 +63,12 @@ async function execute() {
   imageSeq = imageSeq.filter((file) => file.endsWith(flags.format));
   // Sort image sequence
   imageSeq.sort();
+
+  // Images found?
+  if (imageSeq.length < 1) {
+    console.error('No image found? Check sequence image directory.');
+    process.exit();
+  }
 
   // Output video data
   const videoData = [];
