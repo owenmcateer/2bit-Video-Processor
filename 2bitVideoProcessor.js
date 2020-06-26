@@ -83,8 +83,16 @@ async function execute() {
 
     // Process frame
     const frameOutput = [];
-    for (let i = 0; i < image.width * image.height * 3; i += 3) {
-      const pixel = (image.data[i] + image.data[i + 1] + image.data[i + 2]) / 3;
+    for (let i = 0; i < image.width * image.height * image.channels; i += image.channels) {
+      // Single channel image
+      let pixel = image.data[i];
+
+      // Multichannel image (RGB/RGBA)
+      if (image.channels > 1) {
+        pixel = (image.data[i] + image.data[i + 1] + image.data[i + 2]) / 3;
+      }
+
+      // Threshold break
       frameOutput.push(pixel < flags.threshold ? 0 : 1);
     }
 
