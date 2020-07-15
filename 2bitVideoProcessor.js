@@ -30,6 +30,7 @@ const args = require('args');
 const fs = require('fs');
 const { Image } = require('image-js');
 const { exit } = require('process');
+const naturalSort = require('natural-sort');
 
 
 // Setup arguments
@@ -62,7 +63,7 @@ async function execute() {
   // Filter image file types
   imageSeq = imageSeq.filter((file) => file.endsWith(flags.format));
   // Sort image sequence
-  imageSeq.sort();
+  imageSeq.sort(naturalSort());
 
   // Images found?
   if (imageSeq.length < 1) {

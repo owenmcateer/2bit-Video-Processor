@@ -6,7 +6,8 @@
   "author": "Owen McAteer",
   "dependencies": {
     "args": "^5.0.1",
-    "image-js": "^0.21.9"
+    "image-js": "^0.21.9",
+    "natural-sort": "^1.0.0"
   },
   "repository": {
     "type": "git",
